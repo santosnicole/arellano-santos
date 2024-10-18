@@ -98,12 +98,13 @@ export default function App() {
       {error && <Typography color="error">{error}</Typography>}
 
       <Grid container spacing={3}>
-        {movies.map((movie) => (
-          <Grid item xs={12} sm={6} md={4} key={movie.imdbID}>
-            <MovieHolder movie={movie} />
-          </Grid>
-        ))}
-      </Grid>
+  {movies.map((movie) => (
+    <Grid item xs={12} sm={6} md={6} key={movie.imdbID}>
+      <MovieHolder movie={movie} />
+    </Grid>
+  ))}
+</Grid>
+
 
       {/* Modal for title required */}
       <Dialog open={openModal} onClose={handleCloseModal}>
